@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100px;
+  position: relative;
+  padding-top: 1px;
+  background: #f6f6fa;
+  margin: -7px;
+}
