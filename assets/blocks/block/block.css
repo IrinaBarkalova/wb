@@ -1,0 +1,114 @@
+.block__list_item {
+  margin-bottom: 16px;
+}
+.block-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 6px 26px 24px 24px;
+}
+.block__heading {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+}
+.block__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+.block__content > .card-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.block__content_item {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 32px;
+}
+.block__content_item-heading {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+.block__content_item-desc > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.block__content_item-desc > .contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.block__content_item-desc > .contacts:before {
+  content: url("../../images/delivery/star.svg");
+  padding-right: 8px;
+}
+.block__content_item-desc > .contacts > p:not(:last-of-type) {
+  margin-right: 8px;
+}
+.block__content_item-goods {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.block__content_item-goods > .image-wrapper {
+  position: relative;
+  width: 40px;
+  height: 56px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+}
+.block__content_item-goods > .image-wrapper:not(:last-of-type) {
+  margin-right: 8px;
+}
+.block__content_item-goods > .image-wrapper > .counter {
+  right: -8px;
+}
+.block__btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 16px 26px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #CB11AB;
+}
+.block__btn.pencil {
+  padding: 0;
+}
+.block__addition {
+  position: relative;
+}
+.block__addition > p {
+  padding-left: 30px;
+}
+.block__addition > p > .green {
+  color: #0CB477;
+  border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+}
+.block__addition:before {
+  content: url("../../images/delivery/tick.svg");
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.grey-wrapper {
+  background: #F6F6FA;
+  border-radius: 8px;
+  padding: 11px 8px;
+  margin-top: 12px;
+}
+
+/*# sourceMappingURL=block.css.map */
