@@ -1,0 +1,32 @@
+.card-info {
+  margin-bottom: 8px;
+}
+.card-info__number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 12px;
+}
+.card-info__number::before {
+  content: "";
+  position: relative;
+  width: 32px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 4px;
+  object-fit: contain;
+  background-color: #d5d5d5;
+}
+.card-info__number.mir::before {
+  content: url("../../images/pay/mir.png");
+}
+.card-addition {
+  color: #A0A0A4;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+/*# sourceMappingURL=card.css.map */

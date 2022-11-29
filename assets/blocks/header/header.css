@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Segoe UI Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Regular"), url("../../fonts/Segoe UI.woff") format("woff");
+}
+@font-face {
+  font-family: "Segoe UI Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold"), url("../../fonts/Segoe UI Bold.woff") format("woff");
+}
+html {
+  font-family: "Segoe UI Regular", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  padding: 0 24px;
+}
+
+.header {
+  background: #6725A8;
+  padding-top: 16px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+}
+.header__menu > svg {
+  padding: 12px 10px;
+}
+.header__menu-wrapper {
+  margin-right: 16px;
+}
+.header__heading {
+  margin-right: 32px;
+  cursor: pointer;
+}
+.header__search-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 36px;
+  padding: 10px 40px 10px 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.header__search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.header__search-bar:focus {
+  outline: 0;
+  outline-offset: 0;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+.header__search-bar:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.header__search-bar-wrapper {
+  position: relative;
+  flex-grow: 1;
+  margin-right: 32px;
+}
+.header__search-bar_btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+.header__search-bar_btn > svg > g {
+  opacity: 0.4;
+}
+.header-btn__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  column-gap: 40px;
+}
+.header-btn__list_item {
+  position: relative;
+}
+.header-btn__list_item > .btn > svg {
+  margin-bottom: 6px;
+}
+.header-btn__list_item-text {
+  color: #fff;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  padding: 0 7px;
+  background: #F55123;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+/*# sourceMappingURL=header.css.map */

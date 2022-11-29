@@ -1,0 +1,117 @@
+.sum-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sum-block {
+  width: 100%;
+  position: relative;
+}
+.sum-block-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+}
+.sum-block > .block-heading {
+  margin-bottom: 8px;
+}
+.sum-heading {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.delivery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4px;
+}
+
+.subheading {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.text-small {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000;
+}
+
+.date {
+  color: #CB11AB;
+  border-bottom: 1px dashed rgba(203, 17, 171, 0.2);
+}
+
+.checkbox:checked + label:before {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  content: url("../../images/icons/tick-checkbox.svg");
+  background-color: #CB11AB;
+  justify-content: center;
+}
+.checkbox-wrapper {
+  margin-bottom: 11px;
+}
+.checkbox-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox-label:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  border-radius: 8px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.order-btn {
+  background: #CB11AB;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.agreement-wrapper {
+  position: relative;
+  padding-left: 21px;
+}
+.agreement-wrapper:before {
+  content: url("../../images/icons/tick-agreement.svg");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.docs-link {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.docs-link:hover {
+  color: #CB11AB;
+}
+
+/*# sourceMappingURL=sum.css.map */

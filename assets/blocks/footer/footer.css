@@ -1,0 +1,16 @@
+.footer {
+  background: #6725A8;
+  padding: 48px 0 24px 0;
+  margin: 0 auto;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*# sourceMappingURL=footer.css.map */
