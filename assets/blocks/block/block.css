@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 16px;
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 16px;
   padding: 6px 26px 24px 24px;
 }
@@ -78,7 +78,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #cb11ab;
+  color: #CB11AB;
 }
 .block__btn.pencil {
   padding: 0;
@@ -90,7 +90,7 @@
   padding-left: 30px;
 }
 .block__addition > p > .green {
-  color: #0cb477;
+  color: #0CB477;
   border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
 }
 .block__addition:before {
@@ -101,7 +101,7 @@
 }
 
 .grey-wrapper {
-  background: #f6f6fa;
+  background: #F6F6FA;
   border-radius: 8px;
   padding: 11px 8px;
   margin-top: 12px;
@@ -119,3 +119,5 @@
   height: 96px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
 }
+
+/*# sourceMappingURL=block.css.map */

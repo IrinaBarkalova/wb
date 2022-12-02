@@ -442,28 +442,28 @@
                 <fieldset>
                   <ul class="inputs">
                     <li class="inputs-wrapper name">
-                      <input type="text" class="inputs__item" id="name" pattern="[А-Яа-яЁё]">
                       <label class="inputs__label" for="name">Имя</label>
+                      <input class="inputs__item" id="name">
                       <p class="subtext hidden">Укажите имя</p>
                     </li>
                     <li class="inputs-wrapper surname">
-                      <input type="text" class="inputs__item" id="surname" pattern="[А-Яа-яЁё]">
                       <label class="inputs__label" for="surname">Фамилия</label>
-                      <p class="subtext hidden">Заглушка</p>
+                      <input class="inputs__item" id="surname">
+                      <p class="subtext hidden">Укажите фамилию</p>
                     </li>
                     <li class="inputs-wrapper">
-                      <input type="email" class="inputs__item" id="email">
                       <label class="inputs__label" for="email">Почта</label>
-                      <p class="subtext hidden">Заглушка</p>
+                      <input class="inputs__item" id="email">
+                      <p class="subtext hidden">Укажите электронную почту</p>
                     </li>
                     <li class="inputs-wrapper">
-                      <input type="tel" class="inputs__item" id="tel">
                       <label class="inputs__label" for="tel">Телефон</label>
-                      <p class="subtext hidden">Заглушка</p>
+                      <input class="inputs__item" id="tel">
+                      <p class="subtext hidden">Укажите номер телефона</p>
                     </li>
                     <li class="inputs-wrapper">
-                      <input type="text" class="inputs__item" id="index" pattern="[0-9]{1,10}">
                       <label class="inputs__label" for="index">Индекс</label>
+                      <input class="inputs__item" id="index">
                       <p class="subtext">Для таможенного оформления</p>
                     </li>
                   </ul>
@@ -552,5 +552,6 @@
   </div>
 </footer>
 <script src="assets/blocks/form/form.js"></script>
+<script src="assets/blocks/form/phone-mask.js"></script>
 </body>
 </html>

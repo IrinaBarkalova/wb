@@ -2,15 +2,13 @@
   font-family: "Segoe UI Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Segoe UI Regular"),
-    url("../../fonts/Segoe UI.woff") format("woff");
+  src: local("Segoe UI Regular"), url("../../fonts/Segoe UI.woff") format("woff");
 }
 @font-face {
   font-family: "Segoe UI Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Segoe UI Bold"),
-    url("../../fonts/Segoe UI Bold.woff") format("woff");
+  src: local("Segoe UI Bold"), url("../../fonts/Segoe UI Bold.woff") format("woff");
 }
 html {
   font-family: "Segoe UI Regular", sans-serif;
@@ -25,7 +23,7 @@ a {
 }
 
 .header {
-  background: #6725a8;
+  background: #6725A8;
   padding-top: 16px;
   padding-bottom: 40px;
   margin: 0 auto;
@@ -110,10 +108,12 @@ a {
   top: -5px;
   right: 20px;
   padding: 0 7px;
-  background: #f55123;
+  background: #F55123;
   border-radius: 16px;
   color: #fff;
   font-weight: 700;
   font-size: 10px;
   line-height: 18px;
 }
+
+/*# sourceMappingURL=header.css.map */

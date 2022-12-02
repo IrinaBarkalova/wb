@@ -32,11 +32,11 @@
 .inputs__item:focus {
   outline: none;
 }
-.inputs__item:invalid {
+.inputs__item:invalid, .inputs__item.invalid {
   color: #F55123;
   border-bottom: 1px solid #F55123;
 }
-.inputs__item:invalid + p {
+.inputs__item:invalid + p, .inputs__item.invalid + p {
   visibility: visible;
   color: #F55123;
 }
@@ -65,3 +65,5 @@
 .subtext.hidden {
   visibility: hidden;
 }
+
+/*# sourceMappingURL=form.css.map */
