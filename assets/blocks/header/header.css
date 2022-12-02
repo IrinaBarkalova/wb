@@ -80,7 +80,7 @@ a {
   width: 24px;
   height: 24px;
 }
-.header__search-bar_btn > svg > g {
+.header__search-bar_btn > svg {
   opacity: 0.4;
 }
 .header-btn__list {

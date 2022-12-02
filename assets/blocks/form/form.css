@@ -1,0 +1,69 @@
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 24px;
+  max-width: 700px;
+}
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 64px;
+  grid-column: span 2;
+  position: relative;
+}
+.inputs-wrapper.name, .inputs-wrapper.surname {
+  grid-column: span 3;
+}
+.inputs-wrapper.warning > input {
+  color: #F55123;
+  border-bottom: 1px solid #F55123;
+}
+.inputs-wrapper.warning > p {
+  visibility: visible;
+  color: #F55123;
+}
+.inputs__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 24px;
+  padding: 3px 0;
+}
+.inputs__item:focus {
+  outline: none;
+}
+.inputs__item:invalid, .inputs__item.invalid {
+  color: #F55123;
+  border-bottom: 1px solid #F55123;
+}
+.inputs__item:invalid + p, .inputs__item.invalid + p {
+  visibility: visible;
+  color: #F55123;
+}
+.inputs__label {
+  position: absolute;
+  top: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #A0A0A4;
+}
+.inputs__label.mini {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  top: -2px;
+}
+
+.subtext {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  margin-top: 4px;
+}
+.subtext.hidden {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=form.css.map */

@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="assets/blocks/card/card.css">
   <link rel="stylesheet" href="assets/blocks/block/block.css">
   <link rel="stylesheet" href="assets/blocks/sum/sum.css">
+  <link rel="stylesheet" href="assets/blocks/cart/cart.css">
+  <link rel="stylesheet" href="assets/blocks/form/form.css">
 </head>
 <body>
 <header class="header">
@@ -36,11 +38,8 @@
       <form class="header__search-bar-wrapper" method="get" action="">
         <input type="search" class="header__search-bar" placeholder="Я ищу...">
         <button type="submit" class="header__search-bar_btn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="1">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.93382 3.70286C6.44752 3.70286 3.62132 6.52907 3.62132 10.0154C3.62132 13.5017 6.44752 16.3279 9.93382 16.3279C13.4201 16.3279 16.2463 13.5017 16.2463 10.0154C16.2463 6.52907 13.4201 3.70286 9.93382 3.70286ZM1.93799 10.0154C1.93799 5.59939 5.51784 2.01953 9.93382 2.01953C14.3498 2.01953 17.9296 5.59939 17.9296 10.0154C17.9296 14.4313 14.3498 18.0112 9.93382 18.0112C5.51784 18.0112 1.93799 14.4313 1.93799 10.0154Z" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9602 14.8988C14.2846 14.5659 14.8175 14.559 15.1504 14.8834L21.1959 20.7751C21.5288 21.0995 21.5357 21.6324 21.2112 21.9653C20.8868 22.2982 20.3539 22.3051 20.021 21.9806L13.9756 16.089C13.6427 15.7645 13.6358 15.2317 13.9602 14.8988Z" fill="white"/>
-            </g>
+          <svg class="header__search-bar_btn-svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <use href="assets/images/svg/sprite.svg#search-bar"></use>
           </svg>
         </button>
       </form>
@@ -48,7 +47,7 @@
         <li class="header-btn__list_item bio">
           <button class="btn">
             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5207 5.28873C14.5207 8.05869 12.4361 10.2066 10.006 10.2066C7.57586 10.2066 5.49117 8.05869 5.49117 5.31221C5.47931 2.60094 7.58777 0.5 10.006 0.5C12.4241 0.5 14.5207 2.55399 14.5207 5.28873ZM0.5 18.9977C0.5 19.9836 1.14326 20.5 2.94201 20.5H17.058C18.8567 20.5 19.5 19.9836 19.5 18.9977C19.5 16.1338 15.8429 12.1901 10.006 12.1901C4.15705 12.1901 0.5 16.1338 0.5 18.9977Z" fill="white"/>
+              <use href="assets/images/svg/sprite.svg#bio"></use>
             </svg>
             <p class="header-btn__list_item-text">Профиль</p>
           </button>
@@ -56,11 +55,7 @@
         <li class="header-btn__list_item cart">
           <button class="btn">
             <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2214 15.4665C10.3829 15.9206 10.8452 16.1949 11.3212 16.119L24.0874 14.0828C24.5004 14.017 24.8288 13.701 24.9106 13.2909L26.2654 6.49865C26.3875 5.88644 25.925 5.31324 25.3008 5.30317L7.94122 5.02324C7.24354 5.01199 6.74913 5.70067 6.98289 6.35812L10.2214 15.4665Z" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8262 23.3593C12.1109 23.3593 13.1523 22.3178 13.1523 21.0331C13.1523 19.7484 12.1109 18.707 10.8262 18.707C9.54146 18.707 8.5 19.7484 8.5 21.0331C8.5 22.3178 9.54146 23.3593 10.8262 23.3593Z" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.457 23.3593C23.7417 23.3593 24.7831 22.3178 24.7831 21.0331C24.7831 19.7484 23.7417 18.707 22.457 18.707C21.1723 18.707 20.1308 19.7484 20.1308 21.0331C20.1308 22.3178 21.1723 23.3593 22.457 23.3593Z" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C5.933 2 7.5 1.77614 7.5 1.5C7.5 1.22386 5.933 1 4 1C2.067 1 0.5 1.22386 0.5 1.5C0.5 1.77614 2.067 2 4 2Z" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.45442 0.651472C2.1177 0.556717 3.01745 0.5 4 0.5C4.98255 0.5 5.8823 0.556717 6.54558 0.651472C6.87345 0.69831 7.16489 0.757343 7.38495 0.831667C7.4917 0.867722 7.61185 0.917169 7.71511 0.989256C7.80017 1.04864 8 1.21275 8 1.5C8 1.78725 7.80017 1.95136 7.71511 2.01074C7.61185 2.08283 7.4917 2.13228 7.38495 2.16833C7.16489 2.24266 6.87345 2.30169 6.54558 2.34853C5.8823 2.44328 4.98255 2.5 4 2.5C3.01745 2.5 2.1177 2.44328 1.45442 2.34853C1.12655 2.30169 0.835108 2.24266 0.615051 2.16833C0.508302 2.13228 0.388151 2.08283 0.284892 2.01074C0.199835 1.95136 0 1.78725 0 1.5C0 1.21275 0.199835 1.04864 0.284892 0.989256C0.388151 0.917169 0.508302 0.867722 0.615051 0.831667C0.835108 0.757343 1.12655 0.69831 1.45442 0.651472Z" fill="white"/>
+              <use href="assets/images/svg/sprite.svg#cart"></use>
             </svg>
             <p class="header-btn__list_item-text">Корзина</p>
             <span class="cart-counter counter">3</span>
@@ -77,6 +72,304 @@
         <ul class="block__list">
           <li class="block__list_item cart">
             <h2 class="block__heading">Корзина</h2>
+            <ul class="cart-wrapper">
+              <li class="in-stock-wrapper cart__item">
+                <div class="in-stock__heading cart__item_heading">
+                  <div class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox visually-hidden" id="all">
+                    <label for="all" class="checkbox-label">Выбрать все
+                      <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                        <use href="assets/images/svg/sprite.svg#tick"></use>
+                      </svg>
+                    </label>
+                  </div>
+                  <button class="turn-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#A0A0A4" xmlns="http://www.w3.org/2000/svg">
+                      <use href="assets/images/svg/sprite.svg#turn"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="in-stock__goods cart__item_goods">
+                  <li class="in-stock__goods_item goods__item">
+                    <div class="in-stock__goods_item-wrapper">
+                      <div class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox visually-hidden" id="good-1">
+                        <label for="good-1" class="checkbox-label">
+                          <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                            <use href="assets/images/svg/sprite.svg#tick"></use>
+                          </svg>
+                        </label>
+                      </div>
+                      <div class="goods__item-wrapper">
+                        <div class="image-wrapper large">
+                        </div>
+                        <div class="goods__item_info">
+                          <p class="goods__item_info-heading">Футболка UZcotton мужская</p>
+                          <div class="goods__item_info-characteristics">
+                            <p class="color text-small">Цвет: белый</p>
+                            <p class="size text-small">Размер: 56</p>
+                          </div>
+                          <div class="goods__item_info-contacts">
+                            <p class="place text-small">Коледино WB</p>
+                            <p class="company text-small">OOO Вайлдберриз</p>
+                            <button class="contacts-btn">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <use href="assets/images/svg/sprite.svg#info"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="in-stock__goods_item-wrapper">
+                      <div class="goods__actions-wrapper">
+                        <div class="goods__actions_counter">
+                          <button class="counter-btn less" disabled>−</button>
+                          <span>1</span>
+                          <button class="counter-btn more">+</button>
+                        </div>
+                        <div class="goods__warning">
+                          <p class="text-small">
+                            Осталось 2 шт.
+                          </p>
+                        </div>
+                        <div class="goods__btns">
+                          <button class="like-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#like"></use>
+                            </svg>
+                          </button>
+                          <button class="delete-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="goods__price-wrapper">
+                        <p class="goods__price_item actual">522 сом</p>
+                        <p class="goods__price_item old">1051 сом</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="in-stock__goods_item goods__item">
+                    <div class="in-stock__goods_item-wrapper">
+                      <div class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox visually-hidden" id="good-2">
+                        <label for="good-2" class="checkbox-label">
+                          <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                            <use href="assets/images/svg/sprite.svg#tick"></use>
+                          </svg>
+                        </label>
+                      </div>
+                      <div class="goods__item-wrapper">
+                        <div class="image-wrapper large">
+                        </div>
+                        <div class="goods__item_info">
+                          <p class="goods__item_info-heading">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
+                          <div class="goods__item_info-characteristics">
+                            <p class="color text-small">Цвет: прозрачный</p>
+                          </div>
+                          <div class="goods__item_info-contacts">
+                            <p class="place text-small">Коледино WB</p>
+                            <p class="company text-small">OOO Мегапрофстиль</p>
+                            <button class="contacts-btn">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <use href="assets/images/svg/sprite.svg#info"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="in-stock__goods_item-wrapper">
+                      <div class="goods__actions-wrapper">
+                        <div class="goods__actions_counter">
+                          <button class="counter-btn less">−</button>
+                          <span>200</span>
+                          <button class="counter-btn more">+</button>
+                        </div>
+                        <div class="goods__btns">
+                          <button class="like-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#like"></use>
+                            </svg>
+                          </button>
+                          <button class="delete-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="goods__price-wrapper">
+                        <p class="goods__price_item actual">2 100 047 сом</p>
+                        <p class="goods__price_item old">2 300 047 сом</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="in-stock__goods_item goods__item">
+                    <div class="in-stock__goods_item-wrapper">
+                      <div class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox visually-hidden" id="good-3">
+                        <label for="good-3" class="checkbox-label">
+                          <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                            <use href="assets/images/svg/sprite.svg#tick"></use>
+                          </svg>
+                        </label>
+                      </div>
+                      <div class="goods__item-wrapper">
+                        <div class="image-wrapper large">
+                        </div>
+                        <div class="goods__item_info">
+                          <p class="goods__item_info-heading">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell </p>
+                          <div class="goods__item_info-contacts">
+                            <p class="place text-small">Коледино WB</p>
+                            <p class="company text-small">OOO Вайлдберриз</p>
+                            <button class="contacts-btn">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <use href="assets/images/svg/sprite.svg#info"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="in-stock__goods_item-wrapper">
+                      <div class="goods__actions-wrapper">
+                        <div class="goods__actions_counter">
+                          <button class="counter-btn less">−</button>
+                          <span>2</span>
+                          <button class="counter-btn more" disabled>+</button>
+                        </div>
+                        <div class="goods__warning">
+                          <p class="text-small">
+                            Осталось 2 шт.
+                          </p>
+                        </div>
+                        <div class="goods__btns">
+                          <button class="like-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#like"></use>
+                            </svg>
+                          </button>
+                          <button class="delete-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="goods__price-wrapper">
+                        <p class="goods__price_item actual">494 сом</p>
+                        <p class="goods__price_item old">950 сом</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="unavailable-wrapper cart__item">
+                <div class="unavailable__heading cart__item_heading">
+                  <p>Отсутствуют · <span>3 товара</span></p>
+                  <button class="turn-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#A0A0A4" xmlns="http://www.w3.org/2000/svg">
+                      <use href="assets/images/svg/sprite.svg#turn"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="unavailable__goods cart__item_goods">
+                  <li class="unavailable__goods_item goods__item">
+                    <div class="unavailable__goods_item-wrapper">
+                      <div class="goods__item-wrapper">
+                        <div class="image-wrapper large">
+                        </div>
+                        <div class="goods__item_info unavailable">
+                          <p class="goods__item_info-heading">Футболка UZcotton мужская</p>
+                          <div class="goods__item_info-characteristics">
+                            <p class="color text-small">Цвет: белый</p>
+                            <p class="size text-small">Размер: 56</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unavailable__goods_item-wrapper">
+                      <div class="goods__actions-wrapper">
+                        <div class="goods__btns">
+                          <button class="like-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#like"></use>
+                            </svg>
+                          </button>
+                          <button class="delete-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="unavailable__goods_item goods__item">
+                    <div class="unavailable__goods_item-wrapper">
+                      <div class="goods__item-wrapper">
+                        <div class="image-wrapper large">
+                        </div>
+                        <div class="goods__item_info unavailable">
+                          <p class="goods__item_info-heading">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
+                          <div class="goods__item_info-characteristics">
+                            <p class="color text-small">Цвет: прозрачный</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unavailable__goods_item-wrapper">
+                      <div class="goods__actions-wrapper">
+                        <div class="goods__btns">
+                          <button class="like-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#like"></use>
+                            </svg>
+                          </button>
+                          <button class="delete-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="unavailable__goods_item goods__item">
+                    <div class="unavailable__goods_item-wrapper">
+                      <div class="goods__item-wrapper">
+                        <div class="image-wrapper large">
+                        </div>
+                        <div class="goods__item_info unavailable">
+                          <p class="goods__item_info-heading">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unavailable__goods_item-wrapper">
+                      <div class="goods__actions-wrapper">
+                        <div class="goods__btns">
+                          <button class="like-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#like"></use>
+                            </svg>
+                          </button>
+                          <button class="delete-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <use href="assets/images/svg/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
           </li>
           <li class="block__list_item delivery">
             <div class="block-wrapper">
@@ -145,7 +438,36 @@
           <li class="block__list_item buyer">
             <div class="block-wrapper">
               <h2 class="block__heading">Получатель</h2>
-              <form action="" class="form buyer-form">
+              <form action="" method="POST" class="form buyer-form">
+                <fieldset>
+                  <ul class="inputs">
+                    <li class="inputs-wrapper name">
+                      <label class="inputs__label" for="name">Имя</label>
+                      <input class="inputs__item" id="name">
+                      <p class="subtext hidden">Укажите имя</p>
+                    </li>
+                    <li class="inputs-wrapper surname">
+                      <label class="inputs__label" for="surname">Фамилия</label>
+                      <input class="inputs__item" id="surname">
+                      <p class="subtext hidden">Укажите фамилию</p>
+                    </li>
+                    <li class="inputs-wrapper">
+                      <label class="inputs__label" for="email">Почта</label>
+                      <input class="inputs__item" id="email">
+                      <p class="subtext hidden">Укажите электронную почту</p>
+                    </li>
+                    <li class="inputs-wrapper">
+                      <label class="inputs__label" for="tel">Телефон</label>
+                      <input class="inputs__item" id="tel">
+                      <p class="subtext hidden">Укажите номер телефона</p>
+                    </li>
+                    <li class="inputs-wrapper">
+                      <label class="inputs__label" for="index">Индекс</label>
+                      <input class="inputs__item" id="index">
+                      <p class="subtext">Для таможенного оформления</p>
+                    </li>
+                  </ul>
+                </fieldset>
               </form>
             </div>
           </li>
@@ -182,8 +504,7 @@
             </div>
             <button class="block__btn pencil">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1585 3.05991L16.9401 6.84154L6.72705 17.0546L2.73544 17.8529C2.38557 17.9229 2.07711 17.6144 2.14709 17.2646L2.94541 13.273L13.1585 3.05991ZM4.17707 13.9321L13.1585 4.95072L15.0493 6.84154L6.06789 15.8229L3.70436 16.2956L4.17707 13.9321Z" fill="#CB11AB"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9948 7.78715L12.2132 4.00552L13.6313 2.5874C14.4145 1.8042 15.6843 1.8042 16.4675 2.5874L17.4129 3.53281C18.1961 4.31601 18.1961 5.58584 17.4129 6.36904L15.9948 7.78715ZM16.4675 5.42363C16.7286 5.16256 16.7286 4.73929 16.4675 4.47822L15.5221 3.53281C15.261 3.27174 14.8378 3.27174 14.5767 3.53281L14.104 4.00552L15.9948 5.89634L16.4675 5.42363Z" fill="#CB11AB"/>
+                <use href="assets/images/svg/sprite.svg#pencil"></use>
               </svg>
             </button>
           </div>
@@ -195,19 +516,25 @@
             <div class="grey-wrapper">
               <div class="checkbox-wrapper">
                 <input type="checkbox" class="checkbox visually-hidden" id="immediate-payment">
-                <label for="immediate-payment" class="checkbox-label">Списать оплату сразу</label>
+                <label for="immediate-payment" class="checkbox-label">Списать оплату сразу
+                  <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="assets/images/svg/sprite.svg#tick"></use>
+                  </svg>
+                </label>
               </div>
               <p class="card-addition text-small">Спишем оплату с карты при получении</p>
             </div>
             <button class="block__btn pencil">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1585 3.05991L16.9401 6.84154L6.72705 17.0546L2.73544 17.8529C2.38557 17.9229 2.07711 17.6144 2.14709 17.2646L2.94541 13.273L13.1585 3.05991ZM4.17707 13.9321L13.1585 4.95072L15.0493 6.84154L6.06789 15.8229L3.70436 16.2956L4.17707 13.9321Z" fill="#CB11AB"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9948 7.78715L12.2132 4.00552L13.6313 2.5874C14.4145 1.8042 15.6843 1.8042 16.4675 2.5874L17.4129 3.53281C18.1961 4.31601 18.1961 5.58584 17.4129 6.36904L15.9948 7.78715ZM16.4675 5.42363C16.7286 5.16256 16.7286 4.73929 16.4675 4.47822L15.5221 3.53281C15.261 3.27174 14.8378 3.27174 14.5767 3.53281L14.104 4.00552L15.9948 5.89634L16.4675 5.42363Z" fill="#CB11AB"/>
+                <use href="assets/images/svg/sprite.svg#pencil"></use>
               </svg>
             </button>
           </div>
           <button class="order-btn sum-block">Заказать</button>
           <div class="agreement-wrapper">
+            <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="assets/images/svg/sprite.svg#tick"></use>
+            </svg>
             <p class="agreement-text text-small">Соглашаюсь с
               <a class="docs-link">правилами пользования торговой площадкой</a> и 
               <a class="docs-link">возврата</a></p>
@@ -224,5 +551,7 @@
     </div>
   </div>
 </footer>
+<script src="assets/blocks/form/form.js"></script>
+<script src="assets/blocks/form/phone-mask.js"></script>
 </body>
 </html>

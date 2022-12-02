@@ -88,7 +88,6 @@ a {
 abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -352,4 +351,11 @@ template {
 }
 img, svg {
     vertical-align:bottom
+}
+button, input {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    font-family: inherit;
 }
