@@ -177,3 +177,6 @@
 .unavailable__goods_item:hover > div:nth-of-type(2) {
   visibility: visible;
 }
+.hidden-item {
+  display: none;
+}
