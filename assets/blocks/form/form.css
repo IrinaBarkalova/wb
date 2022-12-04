@@ -36,7 +36,7 @@
   color: #F55123;
   border-bottom: 1px solid #F55123;
 }
-.inputs__item:invalid + p, .inputs__item.invalid + p {
+.inputs__item:invalid + .subtext, .inputs__item.invalid + .subtext {
   visibility: visible;
   color: #F55123;
 }
@@ -65,5 +65,3 @@
 .subtext.hidden {
   visibility: hidden;
 }
-
-/*# sourceMappingURL=form.css.map */
