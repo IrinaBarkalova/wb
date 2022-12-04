@@ -85,6 +85,7 @@
 }
 .block__addition {
   position: relative;
+  width: fit-content;
 }
 .block__addition > p {
   padding-left: 30px;
@@ -104,6 +105,7 @@
   background: #F6F6FA;
   border-radius: 8px;
   padding: 11px 8px;
+  width: 100%;
   margin-top: 12px;
 }
 
@@ -119,5 +121,3 @@
   height: 96px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
 }
-
-/*# sourceMappingURL=block.css.map */

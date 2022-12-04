@@ -30,11 +30,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 .in-stock__goods_item-wrapper > .checkbox-wrapper {
-  align-self: center;
+  margin-top: 40px;
   margin-bottom: 0;
+}
+.in-stock__goods_item-wrapper.price {
+  justify-content: space-between;
 }
 .in-stock__goods_item > div:nth-of-type(2) > div > .goods__btns, .in-stock__goods_item > div:nth-of-type(2) > div > .goods__warning {
   visibility: hidden;
@@ -51,7 +55,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
   margin-left: 12px;
   margin-right: 16px;
 }
@@ -128,6 +132,7 @@
   justify-self: flex-end;
 }
 .goods__price-wrapper {
+  position: relative;
   align-self: flex-start;
 }
 .goods__price_item {
@@ -142,10 +147,11 @@
   color: #000;
 }
 .goods__price_item.old {
-  display: inline;
   color: #A0A0A4;
   border-bottom: 1px dashed #A0A0A4;
   text-decoration: line-through;
+  margin-left: auto;
+  width: fit-content;
 }
 
 .like-btn > svg {
@@ -171,5 +177,3 @@
 .unavailable__goods_item:hover > div:nth-of-type(2) {
   visibility: visible;
 }
-
-/*# sourceMappingURL=cart.css.map */
