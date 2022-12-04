@@ -17,6 +17,7 @@ inputs.forEach((input) => {
                 if(!NAME_REGEXP.test(input.value)){
                     input.classList.add('invalid')
                 } else {
+                    input.offsetParent.classList.remove('warning')
                     input.classList.remove('invalid')
                 }
             }
@@ -26,25 +27,28 @@ inputs.forEach((input) => {
                     input.classList.add('invalid')
                     input.parentElement.querySelector('.subtext').textContent = 'Проверьте адрес электронной почты'
                 } else {
+                    input.offsetParent.classList.remove('warning')
                     input.classList.remove('invalid')
                 }
             }
             if(input.id === 'tel'){
-                const TEL_REGEXP = /^[\d\+][\d\(\)\ -]{10,30}\d$/;
+                const TEL_REGEXP = /^[\d\+][\d\(\)\ -]{9,30}\d$/;
                 if(!TEL_REGEXP.test(input.value)){
                     input.classList.add('invalid')
                     input.parentElement.querySelector('.subtext').textContent = 'Формат: +9 999 999 99 99'
                 }else {
+                    input.offsetParent.classList.remove('warning')
                     input.classList.remove('invalid')
                 }
             }
             if(input.id === 'index'){
-                const INDEX_REGEXP = /^([1-9]\d{1,10})$/;
+                const INDEX_REGEXP = /^([1-9]\d{1,9})$/;
 
                 if(!INDEX_REGEXP.test(input.value)){
                     input.classList.add('invalid')
                     input.parentElement.querySelector('.subtext').textContent = 'Формат: 1234567'
                 }else {
+                    input.offsetParent.classList.remove('warning')
                     input.classList.remove('invalid')
                 }
             }
@@ -57,10 +61,10 @@ inputs.forEach((input) => {
                 input.parentElement.querySelector('.subtext').textContent = 'Укажите электронную почту'
             }
             if (input.id === 'tel') {
-                input.parentElement.querySelector('.subtext').textContent = 'Укажите электронную почту'
+                input.parentElement.querySelector('.subtext').textContent = 'Укажите телефон'
             }
             if (input.id === 'index') {
-                input.parentElement.querySelector('.subtext').textContent = 'Укажите электронную почту'
+                input.parentElement.querySelector('.subtext').textContent = 'Укажите индекс'
             }
         }
     })
