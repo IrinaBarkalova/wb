@@ -21,7 +21,16 @@
   background-color: #d5d5d5;
 }
 .card-info__number.mir::before {
-  content: url("../../images/pay/mir.png");
+  content: url("../../images/pay/mir.svg");
+}
+.card-info__number.visa::before {
+  content: url("../../images/pay/visa.svg");
+}
+.card-info__number.mastercard::before {
+  content: url("../../images/pay/mastercard.svg");
+}
+.card-info__number.maestro::before {
+  content: url("../../images/pay/maestro.svg");
 }
 .card-addition {
   color: #A0A0A4;
@@ -29,4 +38,3 @@
   line-height: 16px;
 }
 
-/*# sourceMappingURL=card.css.map */

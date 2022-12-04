@@ -1,0 +1,25 @@
+.radio-btn:checked + label:before {
+    box-sizing: border-box;
+    background: #fff;
+    border: 5px solid #CB11AB;
+}
+.radio-label {
+    position: relative;
+    cursor: pointer;
+}
+.radio-label:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.radio-label > .address-text {
+    margin-left: 8px;
+}
+.radio-label > .address-text > div {
+    position: relative;
+    top: -7px;
+}
