@@ -98,16 +98,6 @@
   clip: rect(0 0 0 0);
 }
 
-.order-btn {
-  background: #CB11AB;
-  border-radius: 8px;
-  color: #fff;
-  padding: 12px 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-}
-
 .agreement-wrapper {
   position: relative;
   padding-left: 21px;
@@ -115,7 +105,7 @@
 .agreement-wrapper > svg {
   fill: #000;
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 0;
   transform: translateY(-50%);
 }
@@ -127,5 +117,3 @@
 .docs-link:hover {
   color: #CB11AB;
 }
-
-/*# sourceMappingURL=sum.css.map */

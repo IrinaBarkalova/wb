@@ -20,6 +20,7 @@ a {
 
 .container {
   padding: 0 24px;
+  position: relative;
 }
 
 .header {
@@ -116,4 +117,3 @@ a {
   line-height: 18px;
 }
 
-/*# sourceMappingURL=header.css.map */

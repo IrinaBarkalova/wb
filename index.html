@@ -17,8 +17,140 @@
   <link rel="stylesheet" href="assets/blocks/cart/cart.css">
   <link rel="stylesheet" href="assets/blocks/form/form.css">
   <link rel="stylesheet" href="assets/blocks/tooltip/tooltip.css">
+  <link rel="stylesheet" href="assets/blocks/modal/modal.css">
+  <link rel="stylesheet" href="assets/blocks/radio/radio.css">
+  <link rel="stylesheet" href="assets/blocks/button/button.css">
+  <link rel="stylesheet" href="assets/blocks/tabs/tabs.css">
 </head>
-<body>
+<body class="body">
+<div class="overlay">
+
+</div>
+<div class="modal-wrapper modal cards">
+  <p class="modal__heading">Способ оплаты</p>
+  <div class="modal__main-wrapper">
+    <ul class="modal__main">
+      <li class="modal__main_item cards">
+        <input type="radio" class="radio-btn visually-hidden" id="card-1" name="card" checked>
+        <label for="card-1" class="radio-label">
+          <p class="card-info__number mir">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+      <li class="modal__main_item cards">
+        <input type="radio" class="radio-btn visually-hidden" id="card-2" name="card">
+        <label for="card-2" class="radio-label">
+          <p class="card-info__number visa">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+      <li class="modal__main_item cards">
+        <input type="radio" class="radio-btn visually-hidden" id="card-3" name="card">
+        <label for="card-3" class="radio-label">
+          <p class="card-info__number mastercard">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+      <li class="modal__main_item cards">
+        <input type="radio" class="radio-btn visually-hidden" id="card-4" name="card">
+        <label for="card-4" class="radio-label">
+          <p class="card-info__number maestro">1234 56•• •••• 1234</p>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <div class="btn-wrapper modal__btn">
+    <button class="btn-main cards">Выбрать</button>
+  </div>
+  <button class="block__btn modal__btn-close cards">
+    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use href="assets/images/svg/sprite.svg#close"></use>
+    </svg>
+  </button>
+</div>
+<div class="modal-wrapper modal delivery">
+  <p class="modal__heading">Способ доставки</p>
+  <div class="tabs-wrapper modal__tabs">
+    <input class="tabs__input visually-hidden" type="radio" id="modal-1" name="delivery" data-tab="1">
+    <label class="tabs__label" for="modal-1">В пункт выдачи</label>
+    <input class="tabs__input visually-hidden" type="radio" id="modal-2" name="delivery" data-tab="2" checked>
+    <label class="tabs__label" for="modal-2">Курьером</label>
+  </div>
+
+  <div class="modal__main-wrapper">
+    <ul class="modal__main tabs-address__content" data-content="1">
+      <li class="modal__main_heading">Адреса ПВЗ</li>
+      <li class="modal__main_item">
+        <input type="radio" class="radio-btn visually-hidden" id="pp-1" name="pp" checked>
+        <label for="pp-1" class="radio-label">
+          <div class="address-text">
+            <div class="block__content_item-desc">
+              <p class="address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+              <div class="contacts">
+                <p class="contacts__rating"></p>
+                <p class="contacts__pp">Пункт выдачи</p>
+              </div>
+            </div>
+          </div>
+        </label>
+      </li>
+      <li class="modal__main_item">
+        <input type="radio" class="radio-btn visually-hidden" id="pp-2" name="pp">
+        <label for="pp-2" class="radio-label">
+          <div class="address-text">
+            <div class="block__content_item-desc">
+              <p class="address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+              <div class="contacts">
+                <p class="contacts__rating">4.99</p>
+                <p class="contacts__pp">Пункт выдачи</p>
+              </div>
+            </div>
+          </div>
+        </label>
+      </li>
+      <li class="modal__main_item">
+        <input type="radio" class="radio-btn visually-hidden" id="pp-3" name="pp">
+        <label for="pp-3" class="radio-label">
+          <div class="address-text">
+            <div class="block__content_item-desc">
+              <p class="address">г. Бишкек, улица Табышалиева, д. 57</p>
+              <div class="contacts">
+                <p class="contacts__rating">4.99</p>
+                <p class="contacts__pp">Пункт выдачи</p>
+              </div>
+            </div>
+          </div>
+        </label>
+      </li>
+    </ul>
+    <ul class="modal__main tabs-address__content active" data-content="2">
+      <li class="modal__main_heading">Мои адреса</li>
+      <li class="modal__main_item">
+        <input type="radio" class="radio-btn visually-hidden" id="address-1" name="address" checked>
+        <label for="address-1" class="radio-label">
+          <p class="address-text">Бишкек, улица Табышалиева, 57</p>
+        </label>
+      </li>
+      <li class="modal__main_item">
+        <input type="radio" class="radio-btn visually-hidden" id="address-2" name="address">
+        <label for="address-2" class="radio-label">
+          <p class="address-text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+        </label>
+      </li>
+      <li class="modal__main_item">
+        <input type="radio" class="radio-btn visually-hidden" id="address-3" name="address">
+        <label for="address-3" class="radio-label">
+          <p class="address-text">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <div class="btn-wrapper modal__btn">
+    <button class="btn-main delivery">Выбрать</button>
+  </div>
+  <button class="block__btn modal__btn-close delivery">
+    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use href="assets/images/svg/sprite.svg#close"></use>
+    </svg>
+  </button>
+</div>
 <header class="header">
   <div class="container">
     <div class="header-wrapper">
@@ -421,13 +553,13 @@
             <div class="block-wrapper">
               <h2 class="block__heading">Способ доставки</h2>
               <div class="block__content">
-                <div class="block__content_item">
-                  <p class="block__content_item-heading">Пункт выдачи</p>
+                <div class="block__content_item delivery-wrapper-change">
+                  <p class="block__content_item-heading delivery-heading-change">Пункт выдачи</p>
                   <div class="block__content_item-desc">
-                    <p class="address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-                    <div class="contacts">
-                      <p class="contacts__rating">4.99</p>
-                      <p class="contacts__timetable">Ежедневно с 10 до 21 </p>
+                    <p class="address delivery-address-change">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                    <div class="contacts delivery-contacts-change">
+                      <p class="contacts__rating text-small">4.99</p>
+                      <p class="contacts__timetable text-small">Ежедневно с 10 до 21 </p>
                     </div>
                   </div>
                 </div>
@@ -467,7 +599,7 @@
                   <p class="tooltip__text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
                 </div>
               </div>
-              <button class="block__btn">Изменить</button>
+              <button class="block__btn modal__btn-open delivery">Изменить</button>
             </div>
 
           </li>
@@ -476,12 +608,12 @@
               <h2 class="block__heading">Способ оплаты</h2>
               <div class="block__content">
                 <div class="card-info">
-                  <div class="card-info__number mir">1234 56•• •••• 1234</div>
+                  <div class="card-info__number for-change mir">1234 56•• •••• 1234</div>
                   <div class="card-info__expiration">01/30</div>
                 </div>
                 <p class="card-addition">Спишем оплату с карты при получении</p>
               </div>
-              <button class="block__btn">Изменить</button>
+              <button class="block__btn modal__btn-open cards">Изменить</button>
             </div>
           </li>
           <li class="block__list_item buyer">
@@ -531,20 +663,20 @@
             </div>
             <div class="sum-wrapper">
               <p class="sum-heading">4 товара</p>
-              <p class="sum-content">2 302 048 сом</p>
+              <p class="sum-content old-price">2 302 048 сом</p>
             </div>
             <div class="sum-wrapper">
               <p class="sum-heading">Скидка</p>
-              <p class="sum-content">−200 985 сом</p>
+              <p class="sum-content discount">−200 985 сом</p>
             </div>
             <div class="sum-wrapper">
               <p class="sum-heading">Доставка</p>
               <p class="sum-content">Бесплатно</p>
             </div>
           </div>
-          <div class="delivery-wrapper sum-block">
-            <p class="subheading">Доставка в пункт выдачи</p>
-            <p class="address text-small">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+          <div class="delivery-wrapper sum-block delivery-wrapper-change">
+            <p class="subheading delivery-heading-change">Доставка в пункт выдачи</p>
+            <p class="address text-small delivery-address-change">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
             <p class="date text-small">5-8 фев</p>
             <div class="grey-wrapper text-small block__addition">
               <p class="text-small tooltip-btn">
@@ -554,7 +686,7 @@
                 <p class="tooltip__text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
               </div>
             </div>
-            <button class="block__btn pencil">
+            <button class="block__btn pencil modal__btn-open delivery">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="assets/images/svg/sprite.svg#pencil"></use>
               </svg>
@@ -563,7 +695,7 @@
           <div class="card-wrapper sum-block">
             <p class="subheading">Оплата картой</p>
             <div class="card-info">
-              <div class="card-info__number mir">1234 56•• •••• 1234</div>
+              <div class="card-info__number for-change mir">1234 56•• •••• 1234</div>
             </div>
             <div class="grey-wrapper">
               <div class="checkbox-wrapper">
@@ -576,13 +708,13 @@
               </div>
               <p class="card-addition text-small">Спишем оплату с карты при получении</p>
             </div>
-            <button class="block__btn pencil">
+            <button class="block__btn pencil modal__btn-open cards">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="assets/images/svg/sprite.svg#pencil"></use>
               </svg>
             </button>
           </div>
-          <button class="order-btn sum-block">Заказать</button>
+          <button class="btn-main order-btn sum-block">Заказать</button>
           <div class="agreement-wrapper">
             <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <use href="assets/images/svg/sprite.svg#tick"></use>
@@ -604,5 +736,7 @@
   </div>
 </footer>
 <script src="assets/blocks/form/form.js"></script>
+<script src="assets/blocks/modal/modal.js"></script>
+<script src="assets/blocks/tabs/tabs.js"></script>
 </body>
 </html>
