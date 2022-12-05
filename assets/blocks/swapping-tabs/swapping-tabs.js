@@ -10,16 +10,13 @@ turnBtns.forEach((button) => {
     ) {
       let items = document.querySelectorAll(".in-stock__goods_item");
       let label = document.querySelector("label[for=all]");
-      label.classList.remove("checkbox-label:before");
+      label.classList.remove("checkbox-label");
       label.textContent = `266 товаров · ${sumNumber.textContent}`;
       items.forEach((item) => {
         item.classList.add("hidden-item");
       });
       arrow.classList.remove("arrow-up");
       arrow.style.transform = "rotate(180deg)";
-
-
-
     } else if (button.classList.contains("in-stock")) {
       let items = document.querySelectorAll(".in-stock__goods_item");
       items.forEach((item) => {
@@ -28,11 +25,8 @@ turnBtns.forEach((button) => {
       arrow.classList.add("arrow-up");
       arrow.style.transform = "rotate(0deg)";
       let label = document.querySelector("label[for=all]");
-      label.classList.add("checkbox-label:before");
+      label.classList.add("checkbox-label");
       label.textContent = "Выбрать все";
-
-
-
     } else if (
       button.classList.contains("unavailable") &&
       arrow.classList.contains("arrow-up")
