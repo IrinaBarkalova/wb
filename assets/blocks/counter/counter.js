@@ -12,7 +12,6 @@ counters.forEach((counter) => {
   } else {
     warning = Number.MAX_VALUE;
   }
-  console.log(warning);
   increase.addEventListener("click", () => {
     increase.disabled = warning <= count + 1;
     if (count >= 1) {

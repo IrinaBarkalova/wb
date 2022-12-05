@@ -8,7 +8,7 @@ goodsCounters.forEach((counter) => {
 
 const inStockCheckboxes = document.querySelectorAll('.in-stock-checkbox')
 
-inStockCheckboxes.forEach((item) => {
+/*inStockCheckboxes.forEach((item) => {
     if (item.checked) {
         counter++;
     }
@@ -26,8 +26,8 @@ inStockCheckboxes.forEach((item) => {
             allCheckbox.checked = false;
         }
     })
-})
-allCheckbox.checked = counter === inStockCheckboxes.length;
+})*/
+/*allCheckbox.checked = counter === inStockCheckboxes.length;*/
 
 const sizes = document.querySelectorAll('.size')
 

@@ -180,3 +180,7 @@
     width: 80px;
   }
 }
+.image-wrapper > img {
+  object-fit: cover;
+  width: 100%;
+}
