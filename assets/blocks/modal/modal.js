@@ -127,6 +127,15 @@ function changePp(inputs) {
     })
 }
 
+
+
+
+/*modalBtnCards.addEventListener('click', () => {
+
+})*/
+
+
+
 modalCardsOpenBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         modalCards.classList.add('active')
