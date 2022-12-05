@@ -2,13 +2,19 @@
   font-family: "Segoe UI Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Segoe UI Regular"), url("../../fonts/Segoe UI.woff") format("woff");
+  src: local("Segoe UI Regular"), url("../../fonts/SegoeUI.woff") format("woff");
 }
 @font-face {
   font-family: "Segoe UI Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Segoe UI Bold"), url("../../fonts/Segoe UI Bold.woff") format("woff");
+  src: local("Segoe UI Bold"), url("../../fonts/SegoeUI-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Segoe UI Semi-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold"), url("../../fonts/SegoeUI-Bold.woff") format("woff");
 }
 html {
   font-family: "Segoe UI Regular", sans-serif;
@@ -21,6 +27,11 @@ a {
 .container {
   padding: 0 24px;
   position: relative;
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
 }
 
 .header {
@@ -35,12 +46,25 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .header-wrapper {
+    padding: 0 16px;
+  }
+}
 .header__menu {
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 8px;
-}
-.header__menu > svg {
   padding: 12px 10px;
+}
+@media (max-width: 500px) {
+  .header__menu {
+    border: none;
+  }
+}
+@media (max-width: 400px) {
+  .header__menu {
+    padding: 0;
+  }
 }
 .header__menu-wrapper {
   margin-right: 16px;
@@ -49,12 +73,22 @@ a {
   margin-right: 32px;
   cursor: pointer;
 }
+@media (max-width: 500px) {
+  .header__heading {
+    margin-right: 0;
+  }
+}
 .header__search-bar {
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 36px;
   padding: 10px 40px 10px 20px;
   color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 400px) {
+  .header__search-bar {
+    display: none;
+  }
 }
 .header__search-bar::placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -73,6 +107,16 @@ a {
   flex-grow: 1;
   margin-right: 32px;
 }
+@media (max-width: 500px) {
+  .header__search-bar-wrapper {
+    flex-grow: unset;
+  }
+}
+@media (max-width: 400px) {
+  .header__search-bar-wrapper {
+    margin-right: 0;
+  }
+}
 .header__search-bar_btn {
   position: absolute;
   top: 50%;
@@ -83,6 +127,19 @@ a {
 }
 .header__search-bar_btn > svg {
   opacity: 0.4;
+}
+@media (max-width: 400px) {
+  .header__search-bar_btn > svg {
+    opacity: 1;
+  }
+}
+@media (max-width: 400px) {
+  .header__search-bar_btn {
+    position: static;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+  }
 }
 .header-btn__list {
   display: grid;
@@ -95,9 +152,85 @@ a {
 }
 .header-btn__list_item > .btn > svg {
   margin-bottom: 6px;
+  fill: #fff;
+}
+@media (max-width: 500px) {
+  .header-btn__list_item > .btn > svg {
+    height: 30px;
+    fill: #CCCCCC;
+  }
+}
+.header-btn__list_item > .btn > svg > use {
+  fill: #fff;
+}
+@media (max-width: 500px) {
+  .header-btn__list_item > .btn > svg > use {
+    fill: #CCCCCC;
+  }
 }
 .header-btn__list_item-text {
   color: #fff;
+}
+.header-btn__list_item.home {
+  display: none;
+}
+@media (max-width: 500px) {
+  .header-btn__list_item.home {
+    display: block;
+  }
+}
+.header-btn__list_item.catalog {
+  display: none;
+}
+@media (max-width: 500px) {
+  .header-btn__list_item.catalog {
+    display: block;
+  }
+}
+.header-btn__list_item.like {
+  display: none;
+}
+@media (max-width: 500px) {
+  .header-btn__list_item.like {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .header-btn__list_item.bio {
+    order: 5;
+  }
+  .header-btn__list_item.bio > button {
+    width: 60px;
+  }
+}
+@media (max-width: 500px) {
+  .header-btn__list_item.active > button > svg > use {
+    fill: #CB11AB;
+  }
+}
+@media (max-width: 500px) {
+  .header-btn__list_item {
+    height: 100%;
+    text-align: center;
+    transform: translateY(22%);
+  }
+}
+@media (max-width: 700px) {
+  .header-btn__list {
+    column-gap: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .header-btn__list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+    grid-template-columns: repeat(5, 1fr);
+    z-index: 3;
+    width: 100%;
+  }
 }
 
 .counter {
@@ -107,7 +240,7 @@ a {
   justify-content: center;
   position: absolute;
   top: -5px;
-  right: 20px;
+  right: 14px;
   padding: 0 7px;
   background: #F55123;
   border-radius: 16px;

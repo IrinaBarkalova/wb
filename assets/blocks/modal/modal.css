@@ -1,68 +1,86 @@
 .modal {
-    position: relative;
+  position: relative;
 }
 .modal-wrapper {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 408px;
-    padding: 16px 24px 24px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    background: #FFFFFF;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    z-index: 3;
-    display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 408px;
+  padding: 16px 24px 24px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  z-index: 3;
+  display: none;
 }
 .modal-wrapper.active {
-    display: flex;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .modal-wrapper {
+    width: 90%;
+    height: 84%;
+    top: 0;
+    transform: translateX(-50%);
+    border-radius: 0;
+  }
 }
 .modal__heading {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 13px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 13px;
 }
 .modal__main {
-    margin-left: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 16px;
-    margin-bottom: 16px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  margin-bottom: 16px;
 }
 .modal__main_item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
 }
 .modal__main_heading {
-    margin-left: -20px;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+  margin-left: -20px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
 }
 .modal__btn {
-    margin-top: auto;
+  margin-top: auto;
 }
 .modal__btn > button {
-    width: 164px;
+  width: 164px;
+}
+.modal__pp {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  align-content: flex-start;
+}
+.modal__pp > button {
+  height: fit-content;
 }
 
 .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(5, 0, 10, 0.3);
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(5, 0, 10, 0.3);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
 }
 .overlay.active {
-    display: inline-block;
+  display: inline-block;
 }
+

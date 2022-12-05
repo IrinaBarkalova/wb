@@ -37,4 +37,13 @@
   font-size: 13px;
   line-height: 16px;
 }
-
+@media (max-width: 500px) {
+  .card-wrapper.sum-block > .subheading {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .card-wrapper.sum-block > .card-info {
+    display: none;
+  }
+}

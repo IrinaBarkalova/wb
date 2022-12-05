@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  background-color: #F6F6FA;
+  background-color: #F5F5F5;
 }
 .main::before {
   content: "";
@@ -23,4 +23,16 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 32px;
+}
+@media (max-width: 1010px) {
+  .main-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+}
+@media (max-width: 500px) {
+  .main-wrapper {
+    row-gap: 16px;
+    grid-template-columns: minmax(288px, 468px);
+  }
 }

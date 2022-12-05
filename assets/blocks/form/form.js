@@ -48,7 +48,6 @@ inputs.forEach((input) => {
                     input.classList.add('invalid')
                     input.parentElement.querySelector('.subtext').textContent = 'Формат: 1234567'
                 }else {
-                    input.parentElement.querySelector('.subtext').textContent = 'Для таможенного оформления'
                     input.offsetParent.classList.remove('warning')
                     input.classList.remove('invalid')
                 }
